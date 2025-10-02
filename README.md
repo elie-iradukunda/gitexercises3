@@ -1,8 +1,12 @@
-Git Exercises 3
+# Git Exercises 3
 
 This repository contains exercises for refining Git history, including committing, amending, rebasing, cherry-picking, and using reflog.
 
-1. Create Dummy Files
+---
+
+## 1. Create Dummy Files
+
+```bash
 user@LAPTOP-V9PT987N MINGW64 ~/Desktop/part3/gitexercises3 (dev)
 $ touch test{1..4}.md
 
@@ -27,7 +31,8 @@ $ git commit -m "chore: Create fourth file"
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 test4.md
 
-3. Amend and Refine Commits
+
+ 3. Amend and Refine Commits
 user@LAPTOP-V9PT987N MINGW64 ~/Desktop/part3/gitexercises3 (dev)
 $ git reset --soft HEAD~1
 $ git add test1.md
@@ -36,6 +41,7 @@ $ git commit -m "chore: Create first file"
 user@LAPTOP-V9PT987N MINGW64 ~/Desktop/part3/gitexercises3 (dev)
 $ git add test4.md
 $ git commit --amend -m "chore: Create fourth file"
+
 
 4. Interactive Rebase
 user@LAPTOP-V9PT987N MINGW64 ~/Desktop/part3/gitexercises3 (dev)
@@ -47,6 +53,8 @@ Rebased and cleaned up commit messages.
 Squashed commits where necessary:
 
 $ git commit --amend -m "chore: Create third and fourth files"
+
+
 
 5. Splitting Commits
 user@LAPTOP-V9PT987N MINGW64 ~/Desktop/part3/gitexercises3 (dev)
@@ -62,6 +70,8 @@ $ git commit -m "chore: Create fourth file"
 
 user@LAPTOP-V9PT987N MINGW64 ~/Desktop/part3/gitexercises3 (dev)
 $ git rebase -i HEAD~4
+
+
 
 6. Dropping Unwanted Commits
 user@LAPTOP-V9PT987N MINGW64 ~/Desktop/part3/gitexercises3 (dev)
@@ -97,6 +107,3 @@ user@LAPTOP-V9PT987N MINGW64 ~/Desktop/part3/gitexercises3 (dev|CHERRY-PICKING)
 $ git reflog
 $ git checkout HEAD@{2}
 $ git checkout dev
-
-
-Recovered previous states and tracked recent operations.
